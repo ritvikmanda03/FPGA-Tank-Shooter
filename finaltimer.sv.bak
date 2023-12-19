@@ -1,0 +1,7 @@
+module  finaltimer( input Reset, frame_clk, startfinaltimer,
+					output logic endgame);
+					
+endmodule
+					
+					
+					 
