@@ -1,0 +1,5 @@
+module  hittext ( input Reset, frame_clk,
+					input [7:0] keycode,
+					input [9:0] Tank1_X_Motion, Tank2_X_Motion,
+					input logic [63:0] timesig,
+					input logic bull1_collide_flag, bull2_collide_flag, player1flag, player2flag);
