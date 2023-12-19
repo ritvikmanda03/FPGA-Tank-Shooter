@@ -1,0 +1,26 @@
+module (output [9:0] time_output);
+
+logic [9:0] COUNT;
+logic [9:0] TIME;
+
+always_ff @ (posedge frame_clk) begin
+	if(Reset) begin
+		COUNT <= 0;
+		TIME <= 0;
+	end
+	
+	if(COUNT >= 60) begin
+		COUNT <= 0;
+		TIME <= TIME + 1'b1;
+	end
+	
+	else begin
+		COUNT <= COUNT + 1'b1;
+		TIME <= TIME;
+	end
+end
+
+assign time_output = TIME;
+
+endmodule
+
